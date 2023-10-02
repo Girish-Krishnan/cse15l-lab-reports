@@ -5,7 +5,7 @@ Hello, my name is **Girish Krishnan**. I currently double major in *Electrical E
 
 > Welcome to my CSE 15L lab reports website!
 
-![girish](./girish.jpg)
+![girish](./girish.jpeg)
 
 Here are some links to my socials!
 * [Portfolio Website](https://girish-krishnan.github.io/)
