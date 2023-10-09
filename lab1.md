@@ -1,5 +1,6 @@
 # Lab 1
 ## CSE 15L Fall 2023
+**Girish Krishnan**
 
 This lab report covers basic filesystem commands.
 
@@ -29,3 +30,5 @@ Here are some basic filesystem commands, along with their usage and explanation:
 
 ### Use of Generative AI
 Generative AI was **not** used anywhere in this assignment.
+
+[Home Page](./index.html)
