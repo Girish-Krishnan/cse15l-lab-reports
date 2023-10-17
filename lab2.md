@@ -1,6 +1,10 @@
-# Part 1: Implementing `StringServer`
+# Lab Report 2
+#### CSE 15L Fall 2023
+**Girish Krishnan**
 
-### Code for `StringServer.java`:
+## Part 1: Implementing `StringServer`
+
+#### Code for `StringServer.java`:
 
 ```java
 import java.io.IOException;
@@ -120,7 +124,7 @@ java StringServer PORT_NUMBER
 
 where PORT_NUMBER is the port number you want to run the server on.
 
-### Screenshots of using add-message
+#### Screenshots of using add-message
 
 ##### Screenshot 1: Adding "Hello"
 
@@ -173,7 +177,7 @@ The `state` and `currentIdx` fields of the `Handler` class change from this spec
 The `currentIdx` field changes because it is incremented by 1 to keep track of the number of messages. In this specific request, the `currentIdx` field changes from `1` to `2`, before the string is appended with the index and message.
 
 
-# Part 2: Using the commandline with `ls`
+## Part 2: Using the commandline with `ls`
 
 The path to the private key for your SSH key for logging into `ieng6` (on your computer or on the home directory of the lab computer)
 
@@ -189,7 +193,7 @@ A terminal interaction where you log into `ieng6` with your course-specific acco
 
 ![nopassword](./lab2_imgs/terminal_nopass.png)
 
-# Part 3: Something I learned from lab in Week 2 or 3
+## Part 3: Something I learned from lab in Week 2 or 3
 
 **Setting up SSH keys**
 
