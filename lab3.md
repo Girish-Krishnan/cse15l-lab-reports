@@ -126,7 +126,7 @@ static double averageWithoutLowest(double[] arr) {
 
 Chosen command: `grep`, a command-line utility to search text using patterns.
 
-Here are 4 interesting command-line options:
+__Here are 4 interesting command-line options:__
 
 #### `-v` or `--invert-match`
 
@@ -134,7 +134,7 @@ This option inverts the sense of matching, to select non-matching lines. For exa
 
 **Two Examples of Using it**
 
-*Example 1: Counting the number of lines in a file that do not contain a certain word* 
+__*Example 1: Counting the number of lines in a file that do not contain a certain word*__
 ```bash
 grep -vc "gene" ./technical/biomed/ar104.txt
 ```
@@ -144,20 +144,27 @@ Output:
 619
 ```
 
+**What does it do and why is it useful?**
+
 This command finds all the lines in the file `ar104.txt` that do not contain the word "gene", and prints the number of lines that do not contain the word "gene". The `-c` option prints only a count of the matching lines. The `-v` option inverts the sense of matching, to select non-matching lines. This is useful because it allows you to find all the lines in a file that do not contain a certain word or phrase.
 
-*Example 2: Removing all lines containing a certain word from a file*
+__*Example 2: Removing all lines containing a certain word from a file*__
 ```bash
 grep -v "gene" ./technical/biomed/ar104.txt > ./technical/biomed/ar104_no_gene.txt
 ```
 
 Output: We can check that the word count of "gene" in the original file is 619, and the word count in the new file is 0.
 
+
 ```bash
 grep -c "gene" ./technical/biomed/ar104_no_gene.txt
 
 # Will return 0
 ```
+
+**What does it do and why is it useful?**
+
+This command finds all the lines in the file `ar104.txt` that do not contain the word "gene", and writes the lines to a new file called `ar104_no_gene.txt`. The `-v` option inverts the sense of matching, to select non-matching lines. This is useful because it allows you to remove all lines containing a certain word or phrase from a file. A practical situation where this would be useful is in bioinformatics, where you may want to remove all lines containing a certain gene from a file containing a list of genes.
 
 **Source:** The `man` command in the terminal was used to find this option. The `man` command is used to display the manual page for a command. For example, `man grep` displays the manual page for the `grep` command. The manual page for `grep` can also be found [here](https://www.gnu.org/software/grep/manual/grep.html).
 
@@ -168,7 +175,7 @@ This option prints only the matching part of the lines. For example, if you want
 
 **Two Examples of Using it**
 
-*Example 1: Finding all the words in a file that contain a certain word*
+__*Example 1: Finding all the words in a file that contain a certain word*__
 ```bash
 grep -o "genetic" ./technical/biomed/ar104.txt
 ```
@@ -179,9 +186,11 @@ Output:
 genetic
 ```
 
+**What does it do and why is it useful?**
+
 It turns out there was only one instance of the word "genetic" in the file `ar104.txt`. This command finds all the lines in the file `ar104.txt` that contain the word "genetic", and prints only the word "genetic" from each line. The `-o` option prints only the matching part of the lines. This is useful because it allows you to find all the words in a file that contain a certain word or phrase.
 
-*Example 2: Showing the line containing a certain word*
+__*Example 2: Showing the line containing a certain word*__
 ```bash
 grep -o "gene.*" ./technical/biomed/ar104.txt
 ```
@@ -234,6 +243,8 @@ genetically modified to express IL-4, is able to
 gene therapy for the clinical treatment of RA.
 ```
 
+**What does it do and why is it useful?**
+
 This command finds all the lines in the file `ar104.txt` that contain the word "gene", starting from the word "gene" to the end of the line, and prints only the matching part of the lines. The `-o` option prints only the matching part of the lines. This is useful because it allows you to show the line containing a certain word or phrase and allows you to see the context of the word or phrase.
 
 **Source:** The `man` command in the terminal was used to find this option. The `man` command is used to display the manual page for a command. For example, `man grep` displays the manual page for the `grep` command. The manual page for `grep` can also be found [here](https://www.gnu.org/software/grep/manual/grep.html).
@@ -244,7 +255,7 @@ This option prints only a count of the matching lines. For example, if you want 
 
 **Two Examples of Using it**
 
-*Example 1: Counting the number of lines in a file that contain a certain word* 
+__*Example 1: Counting the number of lines in a file that contain a certain word*__
 ```bash
 grep -c "gene" ./technical/biomed/ar104.txt
 ```
@@ -254,9 +265,11 @@ Output:
 43
 ```
 
-This command finds all the lines in the file `ar104.txt` that contain the word "gene", and prints the number of lines that contain the word "gene". The `-c` option prints only a count of the matching lines. 
+**What does it do and why is it useful?**
 
-*Example 2: Using grep -c to count the number of lines in a file*
+This command finds all the lines in the file `ar104.txt` that contain the word "gene", and prints the number of lines that contain the word "gene". The `-c` option prints only a count of the matching lines. This helps us count the number of lines in a file that contain a certain word or phrase - and can be used in basic natural language processing.
+
+__*Example 2: Using grep -c to count the number of lines in a file*__
 ```bash
 grep -c "" ./technical/biomed/ar104.txt
 ```
@@ -267,7 +280,9 @@ Output:
 662
 ```
 
-This command finds all the lines in the file `ar104.txt` that contain the empty string, and prints the number of lines that contain the empty string, which is essentially the number of lines in the file.
+**What does it do and why is it useful?**
+
+This command finds all the lines in the file `ar104.txt` that contain the empty string, and prints the number of lines that contain the empty string, which is essentially the number of lines in the file. The `-c` option prints only a count of the matching lines. This is useful because it allows you to count the number of lines in a file in a quick and easy way.
 
 **Source:** The `man` command in the terminal was used to find this option. The `man` command is used to display the manual page for a command. For example, `man grep` displays the manual page for the `grep` command. The manual page for `grep` can also be found [here](https://www.gnu.org/software/grep/manual/grep.html).
 
@@ -277,7 +292,7 @@ This option highlights the matching text in color. For example, if you want to f
 
 **Two Examples of Using it**
 
-*Example 1: Highlighting the matching text in color*
+__*Example 1: Highlighting the matching text in color*__
 ```bash
 grep --color=auto "gene" ./technical/biomed/ar104.txt
 ```
@@ -285,9 +300,11 @@ grep --color=auto "gene" ./technical/biomed/ar104.txt
 Output:
 ![](./lab3_imgs/color1.png)
 
-This command finds all the lines in the file `ar104.txt` that contain the word "gene", and highlights the word "gene" in color.
+**What does it do and why is it useful?**
 
-*Example 2: Highlighting the entire line in color*
+This command finds all the lines in the file `ar104.txt` that contain the word "gene", and highlights the word "gene" in color. This helps emphasize the matching text and makes it easier to find the matching text.
+
+__*Example 2: Highlighting the entire line in color*__
 
 This highlights the text starting from "gene" until the end of the line.
 
@@ -299,6 +316,8 @@ Output:
 
 ![](./lab3_imgs/color2.png)
 
-This command finds all the lines in the file `ar104.txt` that contain the word "gene", starting from the word "gene" to the end of the line, and highlights the entire line in color.
+**What does it do and why is it useful?**
+
+This command finds all the lines in the file `ar104.txt` that contain the word "gene", starting from the word "gene" to the end of the line, and highlights the entire line in color. This helps us highlight or emphasize phrases starting with a certain word or phrase and ending at the end of the line.
 
 **Source:** The `man` command in the terminal was used to find this option. The `man` command is used to display the manual page for a command. For example, `man grep` displays the manual page for the `grep` command. The manual page for `grep` can also be found [here](https://www.gnu.org/software/grep/manual/grep.html).
